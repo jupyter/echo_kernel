@@ -44,7 +44,7 @@ jobs:
         run: |
           cd $HOME
           jupyter kernelspec list | grep echo
-          jupyter kernelspec remove echo
+          jupyter kernelspec remove -y echo
           python -m echo_kernel.install
           jupyter kernelspec list | grep echo
 
