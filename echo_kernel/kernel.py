@@ -6,7 +6,7 @@ class EchoKernel(Kernel):
     language = 'no-op'
     language_version = '0.1'
     language_info = {
-        'name': 'Any text',
+        'name': 'echo',
         'mimetype': 'text/plain',
         'file_extension': '.txt',
     }

@@ -1,0 +1,44 @@
+[build-system]
+requires = [
+    "hatchling>=1.10.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "echo-kernel"
+dynamic = [
+    "version",
+]
+description = "Simple example kernel for Jupyter"
+readme = "README.rst"
+license = ""
+authors = [
+    { name = "Jupyter Development Team", email = "jupyter@googlegroups.com" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "ipykernel",
+    "IPython",
+    "jupyter_client",
+]
+
+[project.optional-dependencies]
+test = [
+  "jupyter_kernel_test",
+]
+
+[project.urls]
+Homepage = "https://github.com/jupyter/echo_kernel"
+
+[tool.hatch.version]
+path = "echo_kernel/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/echo_kernel",
+]
