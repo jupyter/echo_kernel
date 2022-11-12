@@ -19,7 +19,6 @@ def install_my_kernel_spec(user=True, prefix=None):
         with open(os.path.join(td, 'kernel.json'), 'w') as f:
             json.dump(kernel_json, f, sort_keys=True)
         print('Installing Jupyter kernel spec')
-        
         # requires logo files in kernel root directory
         cur_path = os.path.dirname(os.path.realpath(__file__))
         for logo in ["logo-32x32.png", "logo-64x64.png"]:
@@ -28,7 +27,8 @@ def install_my_kernel_spec(user=True, prefix=None):
             except FileNotFoundError:
                 print("Custom logo files not found. Default logos will be used.")
         
-        KernelSpecManager().install_kernel_spec(td, 'echo', user=user, replace=True, prefix=prefix)
+        KernelSpecManager().install_kernel_spec(td, 'echo', user=user, prefix=prefix)
+
 
 def _is_root():
     try:
