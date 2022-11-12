@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "hatchling>=1.10.0",
+    "hatchling>=1.10.0", "ipykernel"
 ]
 build-backend = "hatchling.build"
 
@@ -23,7 +23,6 @@ classifiers = [
 requires-python = ">=3.8"
 dependencies = [
     "ipykernel",
-    "IPython",
     "jupyter_client",
 ]
 
@@ -38,7 +37,14 @@ Homepage = "https://github.com/jupyter/echo_kernel"
 [tool.hatch.version]
 path = "echo_kernel/__init__.py"
 
+# Used to call hatch_build.py
+[tool.hatch.build.hooks.custom]
+
+
 [tool.hatch.build.targets.sdist]
 include = [
     "/echo_kernel",
 ]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"data_kernelspec/share" = "share"
