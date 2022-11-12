@@ -42,8 +42,10 @@ jobs:
           python -m unittest -v
       - name: Check Kernel
         run: |
-          python -m echo_kernel.install
           cd $HOME
+          jupyter kernelspec list | grep echo
+          jupyter kernelspec remove echo
+          python -m echo_kernel.install
           jupyter kernelspec list | grep echo
 
   check_release:

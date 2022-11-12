@@ -5,13 +5,14 @@ import sys
 import shutil
 
 from jupyter_client.kernelspec import KernelSpecManager
-from IPython.utils.tempdir import TemporaryDirectory
+from tempfile import TemporaryDirectory
 
 kernel_json = {
     "argv": [sys.executable, "-m", "echo_kernel", "-f", "{connection_file}"],
     "display_name": "Echo",
     "language": "text",
 }
+
 
 def install_my_kernel_spec(user=True, prefix=None):
     with TemporaryDirectory() as td:

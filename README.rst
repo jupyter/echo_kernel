@@ -15,7 +15,6 @@ From PyPI
 To install ``echo_kernel`` from PyPI::
 
     pip install echo_kernel
-    python -m echo_kernel.install
     
 From Git using Conda
 ~~~~~~~~~~~~~~~~~~~~
@@ -27,7 +26,6 @@ To install ``echo_kernel`` from git into a Conda environment::
     conda create -n ker jupyter
     conda activate ker
     pip install .
-    python -m echo_kernel.install
 
 
 Using the Echo kernel
