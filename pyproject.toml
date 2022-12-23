@@ -11,7 +11,7 @@ dynamic = [
 ]
 description = "Simple example kernel for Jupyter"
 readme = "README.rst"
-license = ""
+license = { file = "LICENSE" }
 authors = [
     { name = "Jupyter Development Team", email = "jupyter@googlegroups.com" },
 ]
