@@ -1,4 +1,4 @@
-# Changes in jupyter-core
+# Changes in echo kernel
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
