@@ -3,17 +3,16 @@ import sys
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
 
-import argparse
 import json
-import os
-import sys
 import shutil
 
 from jupyter_client.kernelspec import KernelSpecManager
 from tempfile import TemporaryDirectory
 
+# use 'python' executable for portable wheels
+# 
 kernel_json = {
-    "argv": [sys.executable, "-m", "echo_kernel", "-f", "{connection_file}"],
+    "argv": ["python", "-m", "echo_kernel", "-f", "{connection_file}"],
     "display_name": "Echo",
     "language": "text",
 }
